@@ -41,7 +41,12 @@ window.dataLayer.push({
 });
 
 document.getElementById("send-product").addEventListener("click", function () {
-    console.log("Button clicked!");
+    
+    const product = dataLayer.find(function(item) {
+    return item.event === "productView";
+});
+
+console.log(product);
 });
 
 
